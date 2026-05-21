@@ -117,33 +117,3 @@ export const skills = [
   { label: "Teaching", items: ["Tensor Computations for Data Science", "Numerical Methods (IISc, 2023–24)"] },
 ];
 
-export const references = [
-  {
-    name: "Dr. Ratikanta Behera",
-    title: "Assistant Professor",
-    dept: "Dept. of Computational and Data Sciences",
-    institution: "Indian Institute of Science, Bengaluru",
-    email: "ratikanta[AT]iisc[DOT]ac[DOT]in",
-  },
-  {
-    name: "Dr. Ram N. Mohapatra",
-    title: "Professor",
-    dept: "Dept. of Mathematics",
-    institution: "University of Central Florida, Orlando",
-    email: "ram.mohapatra[AT]ucf[DOT]edu",
-  },
-  {
-    name: "Dr. Predrag S. Stanimirović",
-    title: "Professor",
-    dept: "Faculty of Sciences and Mathematics",
-    institution: "University of Niš, Serbia",
-    email: "pecko[AT]pmf[DOT]ni[DOT]ac[DOT]rs",
-  },
-  {
-    name: "Dr. Jajati Keshari Sahoo",
-    title: "Assistant Professor",
-    dept: "Dept. of Mathematics",
-    institution: "BITS Pilani, K.K. Birla Goa Campus",
-    email: "jksahoo[AT]goa[DOT]bits-pilani[DOT]ac[DOT]in",
-  },
-];
