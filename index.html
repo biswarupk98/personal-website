@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biswarup Karmakar — Academic Portfolio</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- styles (load order matters) -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+
+  <!-- reading progress bar -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- cursor glow (desktop) -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- navigation (populated by render.js) -->
+  <nav aria-label="Site navigation"></nav>
+
+  <main>
+    <section id="hero"         aria-label="Introduction"></section>
+    <section id="research"     aria-label="Research interests"></section>
+    <section id="publications" aria-label="Publications"></section>
+    <section id="education"    aria-label="Education"></section>
+    <section id="achievements" aria-label="Distinctions"></section>
+    <section id="skills"       aria-label="Technical skills"></section>
+    <section id="contact"      aria-label="References"></section>
+  </main>
+
+  <footer>
+    Biswarup Karmakar &nbsp;·&nbsp; Indian Institute of Science, Bengaluru &nbsp;·&nbsp; 2026
+  </footer>
+
+  <!-- copy toast -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- entry point (type=module enables ES imports) -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

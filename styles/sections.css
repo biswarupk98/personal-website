@@ -1,0 +1,299 @@
+/* ── hero ────────────────────────────────────────── */
+#hero {
+  padding-top: 120px;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: end;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--ink-mid);
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.hero-meta {
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-light);
+  letter-spacing: 0.08em;
+  line-height: 2;
+}
+
+.hero-meta a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid currentColor;
+}
+
+/* ── research interests ── */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border: 0.5px solid var(--rule);
+  border-radius: 2px;
+  color: var(--ink-mid);
+  background: var(--paper-warm);
+  cursor: default;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── publications ── */
+.pub-list { list-style: none; }
+
+.pub-item {
+  padding: 1.8rem 0;
+  border-bottom: 0.5px solid var(--rule);
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0 1.2rem;
+  transition: background 0.2s;
+}
+
+.pub-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-light);
+  padding-top: 0.25rem;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.pub-authors {
+  font-size: 0.88rem;
+  color: var(--ink-mid);
+  font-style: italic;
+  margin-bottom: 0.35rem;
+}
+
+.pub-venue {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+}
+
+.pub-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge-published { background: #e8f0e8; color: #2a5a2a; border: 0.5px solid #b0ceb0; }
+.badge-review    { background: #f0ebe0; color: #6b4a1a; border: 0.5px solid #d4bc8a; }
+
+.pub-doi {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px dotted currentColor;
+  transition: opacity 0.2s;
+}
+.pub-doi:hover { opacity: 0.65; }
+
+/* ── education ── */
+.edu-item {
+  padding: 1.8rem 0;
+  border-bottom: 0.5px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 2rem;
+}
+
+.edu-degree { font-size: 1.05rem; font-weight: 500; }
+.edu-inst   { font-size: 0.92rem; color: var(--ink-mid); margin-top: 0.25rem; }
+.edu-thesis { font-size: 0.85rem; color: var(--ink-light); font-style: italic; margin-top: 0.4rem; }
+.edu-year   { font-family: var(--mono); font-size: 11px; color: var(--ink-light); letter-spacing: 0.06em; white-space: nowrap; padding-top: 0.25rem; }
+.edu-cgpa   { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-top: 0.3rem; }
+
+/* ── achievements ── */
+.ach-list { list-style: none; }
+
+.ach-item {
+  padding: 1.2rem 0;
+  border-bottom: 0.5px solid var(--rule);
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0 1rem;
+  font-size: 0.95rem;
+}
+
+.ach-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  margin-top: 0.6rem;
+}
+
+/* ── skills ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.skill-group {
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 0.5px solid var(--rule);
+  background: var(--paper-warm);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-group:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(44,74,110,0.07);
+}
+
+.skill-group h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 0.5px solid var(--rule);
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: var(--paper);
+  border: 0.5px solid var(--rule);
+  color: var(--ink-mid);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.skill-group:hover .skill-pill {
+  border-color: rgba(44,74,110,0.25);
+}
+
+.skill-pill:hover {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+}
+
+/* ── references ── */
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.ref-card {
+  padding: 1.5rem;
+  border: 0.5px solid var(--rule);
+  background: var(--paper-warm);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.ref-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.ref-name  { font-weight: 500; font-size: 1rem; margin-bottom: 0.3rem; }
+.ref-title { font-size: 0.85rem; color: var(--ink-mid); font-style: italic; line-height: 1.5; margin-bottom: 0.6rem; }
+
+.ref-email {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-light);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.ref-email::before {
+  content: '✉';
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.ref-email .masked {
+  letter-spacing: 0.06em;
+  filter: blur(3.5px);
+  transition: filter 0.3s ease, color 0.2s;
+  color: var(--accent);
+}
+
+.ref-email.revealed-email .masked {
+  filter: none;
+  color: var(--accent);
+}
+
+.ref-email:hover { color: var(--ink-mid); }
+
+.ref-email .reveal-hint {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.ref-email.revealed-email .reveal-hint { display: none; }
+
+@media (max-width: 600px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-meta { text-align: left; }
+}

@@ -1,0 +1,81 @@
+/* ── tokens & reset ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:        #1a1814;
+  --ink-mid:    #4a4640;
+  --ink-light:  #8a8480;
+  --paper:      #f9f7f2;
+  --paper-warm: #f2ede4;
+  --rule:       #d8d0c4;
+  --accent:     #2c4a6e;
+  --accent-warm:#8b3a2a;
+  --serif: 'EB Garamond', Georgia, serif;
+  --mono:  'DM Mono', 'Courier New', monospace;
+
+  /* spacing scale */
+  --sp-xs: 0.4rem;
+  --sp-sm: 0.8rem;
+  --sp-md: 1.5rem;
+  --sp-lg: 3rem;
+  --sp-xl: 6rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── layout ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 max(2rem, 4vw);
+}
+
+section {
+  padding-top: var(--sp-xl);
+  padding-bottom: 2rem;
+}
+
+/* ── section label ── */
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--rule);
+}
+
+/* ── footer ── */
+footer {
+  margin-top: var(--sp-xl);
+  padding: 2rem 0 4rem;
+  border-top: 0.5px solid var(--rule);
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-light);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .edu-item { grid-template-columns: 1fr; }
+  .edu-year { padding-top: 0.5rem; }
+}
